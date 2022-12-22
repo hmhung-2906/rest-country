@@ -6,7 +6,9 @@ const PaginationStyled = styled.nav`
 		padding-top: 20px;
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		li {
+			margin-top: 20px;
 			min-width: 40px;
 			height: 40px;
 			display: flex;
