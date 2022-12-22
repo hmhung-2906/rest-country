@@ -18,7 +18,7 @@ const ContentContainer = styled.div`
 	width: 100%;
 	overflow: hidden;
 	margin: 0 auto;
-	padding: 100px 12px;
+	padding: 100px 12px 40px;
 `;
 function App() {
 	const themeContext = useContext(ThemeContext);

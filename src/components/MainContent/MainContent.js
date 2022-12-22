@@ -11,7 +11,6 @@ function MainContent(props) {
 		<div>
 			<SearchAndFilter></SearchAndFilter>
 
-			{status === "loading" ? console.log("loading") : console.log("idle")}
 			{status === "loading" ? <Loading></Loading> : <></>}
 			<Countries></Countries>
 		</div>

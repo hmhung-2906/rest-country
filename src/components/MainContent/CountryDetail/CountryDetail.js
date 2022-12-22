@@ -60,6 +60,7 @@ const BackButton = styled.div`
 		cursor: default;
 		user-select: none;
 	}
+	cursor: pointer;
 `;
 const CountryContainer = styled.div`
 	display: flex;

@@ -8,11 +8,17 @@ export const statusSelector = (state) => {
 export const countrySelector = (state) => {
 	return state.countriesList.country;
 };
+export const currentPageSelector = (state) => {
+	return state.countriesList.country;
+};
 export const searchTextSelector = (state) => {
 	return state.filters.search;
 };
 export const regionFilterSelector = (state) => {
 	return state.filters.region;
+};
+export const currentPageFilterSelector = (state) => {
+	return state.filters.currentPage;
 };
 export const countriesRemainingSelector = createSelector(
 	countriesSelector,
