@@ -11,6 +11,9 @@ const CountryCard = styled.div`
 	border-radius: 4px;
 	margin-bottom: 12px;
 	user-select: none;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	&:hover {
 		filter: brightness(0.9);
 	}
@@ -32,21 +35,31 @@ const CountryCard = styled.div`
 	}
 `;
 const CountryInfo = styled.div`
-	padding: 10px 16px;
+	padding: 10px 16px 15px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 	h3 {
 		margin: 16px 0;
 		font-size: 20px;
 		font-weight: bold;
-		height: 50px;
+		flex: 1;
 	}
 	div {
 		display: block;
 		font-size: 16px;
 		font-weight: 700;
 		margin: 4px 0;
+		display: flex;
 		span {
 			font-weight: 400;
 			margin-left: 4px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1; /* number of lines to show */
+			line-clamp: 1;
+			-webkit-box-orient: vertical;
 		}
 	}
 `;
@@ -59,9 +72,8 @@ function Country({ capital, flag, name, population, region }) {
 					<img src={flag} alt="" />
 				</div>
 				<CountryInfo>
-					<div>
-						<h3>{name}</h3>
-					</div>
+					<h3>{name}</h3>
+
 					<div>
 						Population:
 						<span>{population}</span>

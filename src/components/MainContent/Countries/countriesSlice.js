@@ -2,7 +2,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const countriesSlice = createSlice({
 	name: "countriesList",
-	initialState: { status: "idle", countries: [], country: null },
+	initialState: {
+		status: "idle",
+		countries: [],
+		country: null,
+	},
 	reducers: {
 		getCountries: (state, action) => {
 			state.push(action.payload);

@@ -1,9 +1,10 @@
 import React from "react";
 import { MdSearch } from "react-icons/md";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import filterSlice from "./Filter/filterSlice";
+import { searchTextSelector } from "../../../redux/selector";
 
 const SearchPane = styled.div`
 	max-width: 320px;
@@ -50,12 +51,12 @@ const SearchElement = styled.div`
 	}
 `;
 function Search(props) {
-	const [searchText, setSearchText] = useState("");
+	const searchText = useSelector(searchTextSelector);
 	const dispatch = useDispatch();
 	const handleSearchTextChange = (e) => {
-		setSearchText(e.target.value);
 		dispatch(filterSlice.actions.searchFilterChange(e.target.value));
 	};
+
 	return (
 		<SearchPane>
 			<h3>Search Country:</h3>
